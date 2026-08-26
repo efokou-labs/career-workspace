@@ -14,6 +14,8 @@ Browser -> Next.js -> FastAPI -> PostgreSQL
 
 Environments: Compose (laptop), kind `dev` overlay, documented staging/prod in kubernetes-gitops.
 
+On kind, the `dev` overlay runs Postgres and Redis in-cluster (emptyDir, demo credentials labeled `demo: kind-only`). Port-forward the UI with `kubectl -n career-workspace port-forward svc/career-workspace-web 3000:80`.
+
 ## Verify
 
 ```bash
@@ -34,4 +36,3 @@ Secrets never live in Git. Use `.env.example` locally and External Secrets / SOP
 The source code for this project is licensed under the MIT License. Personal content, including my resume, photographs, written content, branding, and other identifying materials, is not covered by this license and may not be reused without permission.
 
 See [LICENSE](LICENSE).
-
