@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      DATABASE_URL: postgresql://app:app@postgres:5432/career
+      DATABASE_URL: postgresql://app:app@postgres:5432/askel
       REDIS_URL: redis://redis:6379/0
       S3_ENDPOINT: http://minio:9000
     depends_on:
@@ -20,7 +20,7 @@ services:
       context: ./apps/api
     command: python -m app.worker
     environment:
-      DATABASE_URL: postgresql://app:app@postgres:5432/career
+      DATABASE_URL: postgresql://app:app@postgres:5432/askel
       REDIS_URL: redis://redis:6379/0
     depends_on:
       postgres:
@@ -44,9 +44,9 @@ services:
     environment:
       POSTGRES_USER: app
       POSTGRES_PASSWORD: app
-      POSTGRES_DB: career
+      POSTGRES_DB: askel
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U app -d career"]
+      test: ["CMD-SHELL", "pg_isready -U app -d askel"]
       interval: 3s
       timeout: 3s
       retries: 20

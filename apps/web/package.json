@@ -1,5 +1,5 @@
 {
-  "name": "career-workspace-web",
+  "name": "askel-web",
   "private": true,
   "scripts": {
     "dev": "next dev",

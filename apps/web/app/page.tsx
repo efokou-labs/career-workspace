@@ -48,8 +48,8 @@ export default function Page() {
 
   return (
     <main>
-      <h1>Career workspace</h1>
-      <p>Track job applications.</p>
+      <h1>Askel</h1>
+      <p>Your job search, one step at a time.</p>
 
       <form onSubmit={onSubmit}>
         <label>

@@ -1,6 +1,6 @@
 .PHONY: verify verify-api verify-web
 verify: verify-api verify-web
-	@echo career-workspace verify passed
+	@echo askel verify passed
 
 verify-api:
 	test -d .venv || python3 -m venv .venv

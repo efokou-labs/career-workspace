@@ -1,8 +1,8 @@
-# career-workspace
+# Askel
 
-Production-style SaaS workload: Next.js UI, FastAPI API + worker, PostgreSQL, Redis, S3-compatible object storage.
+Kind GitOps workload for [Askel](https://www.getaskel.com/) — your job search, one step at a time.
 
-It runs on the **shared platform** (kind + GitOps). It does not create its own AWS account.
+Production runs on Vercel + Neon. This repo is the **shared-platform** copy: Next.js UI, FastAPI API + worker, PostgreSQL, Redis, S3-compatible object storage. It does not create its own AWS account.
 
 ## Architecture
 
@@ -14,7 +14,7 @@ Browser -> Next.js -> FastAPI -> PostgreSQL
 
 Environments: Compose (laptop), kind `dev` overlay, documented staging/prod in kubernetes-gitops.
 
-On kind, the `dev` overlay runs Postgres and Redis in-cluster (emptyDir, demo credentials labeled `demo: kind-only`). Port-forward the UI with `kubectl -n career-workspace port-forward svc/career-workspace-web 3000:80`.
+On kind, the `dev` overlay runs Postgres and Redis in-cluster (emptyDir, demo credentials labeled `demo: kind-only`). Port-forward the UI with `kubectl -n askel port-forward svc/askel-web 3000:80`.
 
 ## Verify
 

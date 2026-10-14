@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 import "./globals.css";
 
-export const metadata = { title: "Career workspace" };
+export const metadata = { title: "Askel" };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
